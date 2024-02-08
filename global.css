@@ -14,7 +14,7 @@
     color: #212121;
     perspective: 4px;
     overflow-x: hidden;
-    overflow-y: scroll;
+    /* overflow-y: scroll; */
     position: relative;
     /* height: 100vh; */
     /* overflow: hidden; */
@@ -22,7 +22,7 @@
  
  header {
    width: 100%;
-   min-height: 90vh;
+   min-height: 100vh;
    display: flex;
    background-image: url('./assets/hero-back.jpg');
    background-size: cover;
@@ -44,9 +44,67 @@
    display: flex;
    flex-direction: column;
    justify-content: center;
-
- 
+   align-items: center;
  }
+
+ .info{
+   text-align: center;
+   display: inline-block;
+   position: relative;
+   color: #fff;
+   cursor:default;
+   white-space: pre-line   /* width: 40%; */
+ }
+
+ .info::after {
+   content: "";
+   position:absolute;
+   width:100%;
+   transform: scaleX(0);
+   height: 5px;
+   bottom: 0;
+   left: 0;
+   background-color: #58b1de;
+   transform-origin: bottom right;
+   transition: transform 0.25s ease-out;
+}
+
+.info:hover::after{
+   transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+.footer{
+   position: absolute;
+   bottom: 0;
+   width: 100%;
+   /* border: 1px solid red; */
+   height: 10vh;
+   background: #0003;
+   color: #fff;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   flex-direction: column;
+}
+.footer p:nth-child(3){
+font-size: 1rem;}
+
+
+@media (max-width: 500px) {
+   .info{
+      font-size: 3rem;
+   }
+   
+}
+@media (max-width: 330px) {
+   .info{
+      font-size: 2rem;
+   }
+   
+}
+
+
  
  header .text-wrapper {
     display: flex;
