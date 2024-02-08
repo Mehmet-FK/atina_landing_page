@@ -25,6 +25,7 @@
    min-height: 100vh;
    display: flex;
    background-image: url('./assets/hero-back.jpg');
+   /* filter: blur(2px); */
    background-size: cover;
    background-repeat: no-repeat;
    background-position: center;
